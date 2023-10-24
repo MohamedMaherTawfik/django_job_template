@@ -1,11 +1,11 @@
 -- title
 -- loction
+-- createion_at
 -- company name
 -- company logo
 -- company subtitle
 -- company website
 -- company email
--- createion date
 -- salary range
 -- descrption
 -- vacancy
