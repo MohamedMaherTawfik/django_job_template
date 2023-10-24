@@ -1,0 +1,14 @@
+-- title
+-- loction
+-- company name
+-- company logo
+-- company subtitle
+-- company website
+-- company email
+-- createion date
+-- salary range
+-- descrption
+-- vacancy
+-- job nature [fulltime-parttime-remote-freelance-]
+-- experince
+-- category
