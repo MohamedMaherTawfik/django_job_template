@@ -69,8 +69,8 @@
                                <h4>Job Overview</h4>
                            </div>
                           <ul>
-                              <li>Posted date : <span>12 Aug 2019</span></li>
-                              <li>Location : <span>New York</span></li>
+                              <li>Posted date : <span>{{job.create_at|date:"d N o"}}</span></li>
+                              <li>Location : <span>{{job.location}}</span></li>
                               <li>Vacancy : <span>{{job.vacancy}}</span></li>
                               <li>Job nature : <span>{{job.job_type}}</span></li>
                               <li>Application date : <span>12 Sep 2020</span></li>
