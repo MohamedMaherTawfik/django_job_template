@@ -1,9 +1,9 @@
-
-from rest_framework.decorators import api_view
-from rest_framework.response import Response
+from django_filters.rest_framework import DjangoFilterBackend
+from rest_framework import filters
 from rest_framework import generics
 from .serializers import jobserializer
 from .models import job
+
 
 # @api_view(['GET'])
 # def job_list_api(request):
@@ -21,10 +21,13 @@ from .models import job
 
 class joblistapi(generics.ListCreateAPIView):
     queryset=job.objects.all()
-    serializer_class=jobserializer
-
-
+    serializer_class=jobserializer 
+    filter_backends = [DjangoFilterBackend,filters.SearchFilter,filters.OrderingFilter]
+    filterset_fields = ['title', 'vacancy','job_type',]
+    search_fields = ['title', 'description',]
+    ordering_fields = ['salary_start', 'salary_end','experince']
 
 class jobdetailapi(generics.RetrieveUpdateDestroyAPIView):
     queryset=job.objects.all()
     serializer_class=jobserializer    
+    
