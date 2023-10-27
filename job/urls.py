@@ -1,6 +1,6 @@
 from django.urls import path
 from .views import job_list,job_detail
-from .api import job_list_api,job_dateail_api
+from .api import job_list_api,job_dateail_api,joblistapi,jobdetailapi
 
 urlpatterns = [
     path('', job_list),
@@ -8,6 +8,6 @@ urlpatterns = [
 
 
 
-    path('api/list',job_list_api),
-    path('api/list/<int:id>',job_dateail_api)
+    path('api/list',joblistapi.as_view()),
+    path('api/list/<int:id>',jobdetailapi)
 ]
