@@ -6,7 +6,6 @@ from job.models import Company,Category,job
 import random
 from faker import Faker
 
-
 def create_category(n):
     fake=Faker()
     for i in range(n):
