@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'django_filters',
     'rest_framework.authtoken',
     'django_summernote', 
+    "bootstrap5",
     
     #My app
     'job',
