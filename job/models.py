@@ -2,6 +2,7 @@ from django.db import models
 from django_countries.fields import CountryField
 from django.utils import timezone
 from django.utils.text import slugify
+from django.core.validators import FileExtensionValidator
 
 
 job_type=(
@@ -61,7 +62,7 @@ class job_apply(models.Model):
     email=models.EmailField()
     linked_in_profile=models.URLField(null=True,blank=True,help_text="Please Enter Your Linkein Profile url")
     github_profile=models.URLField(null=True,blank=True,help_text="Please Enter Your Github Profile url")
-    cv=models.FileField(upload_to='cv',help_text="Please Enter Your latest CV")
+    cv=models.FileField(upload_to='cv',help_text="Please Enter Your latest CV",validators=[FileExtensionValidator(['pdf'], message="Only PDF files are allowed.")])
     cover_letter=models.TextField(max_length=400,help_text="Add your Notes Here...")
     create_at = models.DateTimeField(default=timezone.now)
         
