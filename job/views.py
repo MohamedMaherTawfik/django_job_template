@@ -46,3 +46,10 @@ class Job_apply(CreateView):
         job_apply.save()
         
         return super().form_valid(form)
+    
+    
+class Addjob(CreateView):
+    model=job
+    fields=['title','location','company','salary_start','salary_end','description','vacancy','job_type','experince','category']  
+    success_url="/jobs/"  
+       

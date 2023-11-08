@@ -2,7 +2,6 @@
 -- queryset Api
 -- add job 
 -- add company
--- apply
 -- filter : js --> sql 
 -- pagination
 -- api
